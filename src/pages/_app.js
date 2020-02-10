@@ -5,18 +5,31 @@ import Navbar from "../components/Navbar";
 
 import "../styles/base.scss";
 
-
 export default class MyApp extends App {
-    static async getInitialProps({ Component, router, ctx }) {
+    static async getInitialProps({ Component, ctx }) {
         let pageProps = {};
         if (Component.getInitialProps) {
             pageProps = await Component.getInitialProps(ctx);
         }
+        if (ctx.req && ctx.req.session.passport) {
+            pageProps.user = ctx.req.session.passport.user;
+        }
         return { pageProps };
+    }
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: props.pageProps.user
+        };
     }
 
     render() {
         const { pageProps, Component } = this.props;
+
+        const props = {
+            ...pageProps,
+            user: this.state.user
+        };
 
         return (
             <NextContainer>
@@ -24,9 +37,10 @@ export default class MyApp extends App {
                     <title>Next Passport Auth</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <Navbar />
+                <Navbar user={this.state.user} />
                 <Component {...pageProps} />
             </NextContainer>
         );
     }
 }
+
