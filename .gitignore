@@ -3,7 +3,8 @@ node_modules
 
 .env
 
+./src/.next/cache
+./src/.next/static
+./src/.next/server
 
-.next/cache
-.next/static
-.next/server
+./src/.next
