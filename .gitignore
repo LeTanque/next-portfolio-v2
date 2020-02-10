@@ -1,0 +1,9 @@
+./node_modules
+node_modules
+
+.env
+
+
+.next/cache
+.next/static
+.next/server
