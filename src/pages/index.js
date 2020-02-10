@@ -1,18 +1,25 @@
-// ./src/pages/index.js
+import fetch from "isomorphic-fetch";
+import Thoughts from "../components/Thoughts";
 
 const rocket = {
-    textAlign: "center",
-    "& img": {
-        width: "630px",
-    }
+    textAlign: "center"
 };
 
-function Index() {
+function Index(props) {
+    
     return (
-        <div style={rocket}>
-            <img src="https://media.giphy.com/media/QbumCX9HFFDQA/giphy.gif" />
-        </div>
+        <section  style={rocket} className="section__index">
+            <Thoughts thoughts={props.thoughts} />
+        </section>
     );
 }
+
+Index.getInitialProps = async ({ req }) => {
+    const baseURL = req ? `${req.protocol}://${req.get("Host")}` : "";
+    const res = await fetch(`${baseURL}/api/thoughts`);
+    return {
+        thoughts: await res.json()
+    };
+};
 
 export default Index;

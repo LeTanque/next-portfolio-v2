@@ -6,17 +6,19 @@ An exercise on building a Next.js application with authentication using passport
 
 
 
-
-### Packages and descriptions
+## Packages and descriptions
 > `body-parser`: This package lets your Express application parse different types of request bodies (e.g., application/json) \
 > `dotenv`: This package helps you read environment variables from a file. \
 > `dotenv-webpack`: This package allows you to adjust some of the settings of Next.js. \
 > `express`: This package will allow you to define a backend app more easily. \
 > `isomorphic-fetch`: This package adds an isomorphic fetch function that you can use both on the frontend and the backend. \
-> `next`, `react`, and `react-dom`: Together, these packages let you build React apps that support server-side rendering.
+> `next`, `react`, and `react-dom`: Together, these packages let you build React apps that support server-side rendering. \
+> `@zeit/next-sass`, `node-sass`, `next-compose-plugins`: Together, this allows me to use node-sass and an easier way to deal with the config file \
+> `passport`, `passport-auth0`, `express-session`: Passport auth using auth0. \
+> `uid-safe`: using uid-safe to generate a safe secret to hash cookies.
 
-### Configuration
 
+## Configuration
 `.babelrc` \
 At this point, the .babelrc can be removed, as Next.js will then automatically use next/babel when there is no Babel configuration.
 
@@ -29,11 +31,15 @@ Major configuration tool for Next.js. This one is not as advanced as the next po
 Environment variables. Declaring port as 3000 is kinda like wearing suspenders with a belt, what whatever.
 
 
-### Pages
 
+## Pages
 `index.js` in `src/pages` \
 The root url page.
 
 `_document.js` \
 A custom Document is commonly used to augment your application's <html> and <body> tags. This is necessary because Next.js pages skip the definition of the surrounding document's markup.
+
+`_app.js` \
+Adding a custom getInitialProps in your App will disable Automatic Static Optimization.
+
 

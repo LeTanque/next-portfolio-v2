@@ -25,9 +25,7 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html>
-                <Head>
-                    <title>Next Passport Auth</title>
-                </Head>
+                <Head />
                 <body>
                     <Main />
                     <NextScript />
