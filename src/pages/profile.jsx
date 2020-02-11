@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 
 const pict = {
     borderRadius: "50%",
@@ -5,27 +6,40 @@ const pict = {
     width: "100px",
 }
 
-function Profile({ user }) {
+const Profile = props => {
+    const { user } = props;
+    const [ userProfile, setUserProfile ] = useState({
+        picture: "",
+        displayName: "",
+    })
 
-    if (!user) {
-        return null
-    }
+    useEffect(() => {
+        setUserProfile(user)
+    }, [user])
+    
+    if (!user) return (
+        <h4>Loading...</h4>
+    )
+
     return (
-        <div>
-            <h2>
-                <img src={user.picture} alt={user.displayName} style={pict} /> 
-                Hello,{" "}
-                {user.displayName}
-            </h2>
-            <p>This is what we know about you:</p>
-            <ul>
-                {Object.keys(user).map(key => (
-                    <li key={key}>
-                        {key}: {user[key].toString()}
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <main className="main__profile-card-container" >
+            <section className="section__profile-card" >
+                <div className="block__profile-header">
+                    <img src={userProfile.picture} alt={userProfile.displayName} style={pict} /> 
+                    <h2>
+                        Hello,{" "}
+                        {userProfile.displayName}
+                    </h2>
+                </div>
+                <ul>
+                    {Object.keys(user).map(key => (
+                        <li key={key}>
+                            <strong>{key}</strong>: {user[key].toString()}
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        </main>
     );
 }
 

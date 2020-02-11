@@ -5,8 +5,7 @@ const rocket = {
     textAlign: "center"
 };
 
-function Index(props) {
-    
+const Index = props => {
     return (
         <section  style={rocket} className="section__index">
             <Thoughts thoughts={props.thoughts} />
@@ -14,11 +13,12 @@ function Index(props) {
     );
 }
 
-Index.getInitialProps = async ({ req }) => {
+Index.getInitialProps = async (ctx) => {
+    const { req } = ctx;
     const baseURL = req ? `${req.protocol}://${req.get("Host")}` : "";
     const res = await fetch(`${baseURL}/api/thoughts`);
     return {
-        thoughts: await res.json()
+        thoughts: await res.json(),
     };
 };
 

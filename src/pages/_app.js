@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import App, { Container as NextContainer } from "next/app";
+import App from "next/app";
 import Navbar from "../components/Navbar";
 
 import "../styles/base.scss";
 
+
+const MyComponent = (props) => {
+    const { Component, state } = props;
+    const [ userState, setUserState ] = useState(state)
+
+    useEffect(() => {
+        setUserState(state)
+    }, [state])
+
+    return (
+        <>
+            <Navbar {...props} userState={userState} />
+            <Component {...props} userState={userState} setUserState={setUserState} />
+        </>
+    )
+}
+
+
+
 export default class MyApp extends App {
-    static async getInitialProps({ Component, ctx }) {
+    static async getInitialProps(props) {
+        const { Component, ctx } = props;
+
         let pageProps = {};
+
         if (Component.getInitialProps) {
             pageProps = await Component.getInitialProps(ctx);
         }
@@ -16,6 +38,7 @@ export default class MyApp extends App {
         }
         return { pageProps };
     }
+
     constructor(props) {
         super(props);
         this.state = {
@@ -26,20 +49,28 @@ export default class MyApp extends App {
     render() {
         const { pageProps, Component } = this.props;
 
+        let userSession = pageProps.session ? pageProps.session : null;
+
         const props = {
             ...pageProps,
-            user: this.state.user
+            user: this.state.user,
         };
 
         return (
-            <NextContainer>
+            <>
                 <Head>
                     <title>Next Passport Auth</title>
                     <link rel="icon" href="/favicon.ico" />
+                    <script
+                        id="session"
+                        type="application/json"
+                        dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(userSession, null, 2)
+                        }}
+                    />
                 </Head>
-                <Navbar user={this.state.user} />
-                <Component {...pageProps} />
-            </NextContainer>
+                <MyComponent state={this.state} Component={Component} {...props} />
+            </>
         );
     }
 }

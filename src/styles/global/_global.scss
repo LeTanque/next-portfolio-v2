@@ -21,10 +21,14 @@ body {
 
 a, svg[class^='link'], svg[class*=' link'] {
     text-decoration: none;
-    font-size: 2.2rem;
-    // color: inherit;
+    color: $link;
     user-select: none;
+    transition: color linear 600ms;
     cursor: pointer;
+    &:hover, &:active {
+        color: $linkactive;
+        transition: color linear 600ms;
+    }
 }
 
 

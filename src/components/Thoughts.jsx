@@ -18,7 +18,7 @@ export default function Thoughts(props) {
             </div>
             {props.thoughts &&
                 props.thoughts.map(thought => (
-                    <div key={thought._id} >
+                    <div key={thought.id} >
                         <Thought thought={thought} />
                     </div>
                 ))}

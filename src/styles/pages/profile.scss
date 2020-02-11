@@ -1,0 +1,30 @@
+
+
+.main__profile-card-container {
+    width: 100%;
+    display: block;
+    position: relative;
+    .section__profile-card {
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        .block__profile-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 20px;
+            h2 {
+                padding-left: 20px;
+            }
+        }
+        ul {
+            list-style: disc;
+            padding: 0 10px;
+            overflow-wrap: break-word;
+            li {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

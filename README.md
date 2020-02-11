@@ -15,7 +15,8 @@ An exercise on building a Next.js application with authentication using passport
 > `next`, `react`, and `react-dom`: Together, these packages let you build React apps that support server-side rendering. \
 > `@zeit/next-sass`, `node-sass`, `next-compose-plugins`: Together, this allows me to use node-sass and an easier way to deal with the config file \
 > `passport`, `passport-auth0`, `express-session`: Passport auth using auth0. \
-> `uid-safe`: using uid-safe to generate a safe secret to hash cookies.
+> `uid-safe`: using uid-safe to generate a safe secret to hash cookies. \
+> `connect-ensure-login`: used to verify local strategy login
 
 
 ## Configuration
@@ -43,3 +44,9 @@ A custom Document is commonly used to augment your application's <html> and <bod
 Adding a custom getInitialProps in your App will disable Automatic Static Optimization.
 
 
+## Passport
+Passport offers different strategies that you can use for authentication. Auth0 configuration is setup. Passport-local is also installed as an alternative strat.
+
+
+## Experiment
+Try building out a sqlite database with the app that can be deployed all in one. A monolith.
