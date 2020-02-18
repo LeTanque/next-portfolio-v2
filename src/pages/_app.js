@@ -3,7 +3,7 @@ import Head from "next/head";
 import App from "next/app";
 import Nav from "../components/Nav";
 
-// import { PageTransition } from "next-page-transitions";
+import { PageTransition } from "next-page-transitions";
 
 import "../styles/base.scss";
 
@@ -11,15 +11,31 @@ import "../styles/base.scss";
 const MyComponent = (props) => {
     const { Component, state, router } = props;
     const [ userState, setUserState ] = useState(state)
-
+    
     useEffect(() => {
         setUserState(state)
     }, [state])
-
+    
     return (
         <>
             <Nav userState={userState} router={router.route}/>
-            <Component {...props} userState={userState} setUserState={setUserState} />
+            <PageTransition
+                timeout={props.timeout}
+                classNames={`page-transition-${props.transitionType}`}
+                loadingClassNames={`section__loading`}
+                loadingDelay={0}
+                loadingTimeout={{
+                    enter: props.timeout,
+                    exit: 0,
+                }}
+            >
+                <Component 
+                    {...props}
+                    key={router.route}
+                    userState={userState} 
+                    setUserState={setUserState} 
+                />
+            </PageTransition>
         </>
     )
 }
@@ -50,7 +66,6 @@ export default class MyApp extends App {
 
     render() {
         const { pageProps, Component, router } = this.props;
-
 
         let userSession = pageProps.session ? pageProps.session : null;
 

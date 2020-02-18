@@ -5,6 +5,7 @@
     display: block;
     position: relative;
     top: 150px;
+    margin-bottom: 50px;
     .section__profile-card {
         background-color: $bg-color-alt;
         width: 100%;
@@ -33,6 +34,7 @@
             font-family: $cursive-font;
             font-size: 3.4rem;
             color: $primary;
+            padding: 25px 0 50px 0;
             @media  #{$tablet-small} {
                 font-size: 2.4rem;
             }

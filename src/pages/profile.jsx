@@ -92,6 +92,8 @@ Profile.getInitialProps = async (ctx) => {
 
     return {
         userData: await res.json(),
+        transitionType: 'none',
+        timeout: 0
     };
 
 };
