@@ -8,17 +8,17 @@
     align-items: center;
     .block--link-icon {
         margin: 0 15px;
-        @include textIconLinkGlow($transTime: 800ms, $colorOne: $fire, $colorTwo: $black);
+        @include textIconLinkGlow($transTime: 800ms, $colorOne: $secondary, $colorTwo: $primary);
         a {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             font-size: 1.2rem;
-            color: $white;
+            color: $text;
             .link-icon {
                 font-size: 12rem;
-                color: $fire;
+                color: $secondary;
             }
         }
     }

@@ -1,0 +1,78 @@
+
+$white: #ffffff;
+$black: #000000;
+
+$mirage: #979797;
+$ambient-grey: #3b3d44;
+$coolgrey: #6a7073;
+$silver-lining: #ededef;
+$elansgrey: #eae6fa;
+$franksgrey: #f9f8f9;
+$snow-white: #fff;
+
+// old
+$licorice: #111111;
+$cosmic: #33337f;
+$glow: #d18485;
+$ember: #752b2c;
+$pastegrey: #cccccc;
+$isabelline: #eeeeee;
+
+// https://coolors.co/cc282b-151e3f-d89a9e-030027-f2f3d9
+$fire: #cc282b;
+$parrot: #d89a9e;
+$yankees: #151e3f;
+$richblack: #030027;
+$beige: #f2f3d9;
+
+// open color
+// PALETTE
+$blaze: $oc-red-8;
+$raisin: #21211F;
+$charleston: #2D2D2A;
+$darkliver: #4C4C47;
+$shadowblue: #848FA5;
+$bone: #E5DCC5;
+$beige: #f2f3d9;
+//
+
+
+// 
+// System
+// #3. Drop the Neutral Neutrals
+$primary: $shadowblue;
+$secondary: $blaze;
+
+$bg-color: $licorice;
+$bg-color-alt: $charleston;
+
+$text: $beige;
+$text-emphasis: $beige;
+$text-input: $raisin;
+$text-light: $beige;
+$text-dark: $raisin;
+
+$shadows: $licorice;
+
+$system: $mirage;
+
+$link: $secondary;
+$linkactive: complement($secondary);
+
+$button-bg: $secondary;
+$buttonactive-bg: complement($secondary);
+$button-fg: $bg-color;
+$buttonactive-fg: complement($bg-color);
+
+// //
+
+
+
+// Font color pointers
+// .cfont-licorice { color: $licorice }
+// .cfont-cosmic { color: $cosmic }
+// .cfont-fire { color: $fire }
+// .cfont-ember { color: $ember }
+// .cfont-pastegrey { color: $pastegrey }
+// .cfont-isabelline { color: $isabelline }
+

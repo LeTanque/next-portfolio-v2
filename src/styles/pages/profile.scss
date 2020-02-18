@@ -4,27 +4,42 @@
     width: 100%;
     display: block;
     position: relative;
+    top: 150px;
     .section__profile-card {
+        background-color: $bg-color-alt;
         width: 100%;
-        padding: 0 20px;
+        max-width: 800px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
+        padding: 10px 50px;
+        @media #{$tablet-small} {
+            padding: 25px 10%;
+        }
         .block__profile-header {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             padding-bottom: 20px;
-            h2 {
-                padding-left: 20px;
-            }
+            padding-top: 20px;
         }
         ul {
-            list-style: disc;
-            padding: 0 10px;
             overflow-wrap: break-word;
             li {
                 margin-bottom: 5px;
             }
         }
+        .block__signature {
+            font-family: $cursive-font;
+            font-size: 3.4rem;
+            color: $primary;
+            @media  #{$tablet-small} {
+                font-size: 2.4rem;
+            }
+        }
     }
 }
+
+
+
+

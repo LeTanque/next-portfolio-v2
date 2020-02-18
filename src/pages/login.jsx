@@ -25,7 +25,7 @@ const Login = props => {
         event.preventDefault();
         await axios({
             method: "POST",
-            baseURL: "/login",
+            baseURL: "/auth/login",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -42,13 +42,14 @@ const Login = props => {
             let cleanResponse = response.data.replace("<!DOCTYPE html>", "");
             cleanResponse = cleanResponse.replace("<html>", "");
             ReactHtmlParser(cleanResponse, options);
+            Router.push("/");
         })
         .catch(err => console.log("error in submit form", err));
-        Router.push("/");
+        setFormState({ username:"", password:"" })
     };
 
     return (
-        <section className="section__form">
+        <section className="section__form login">
             <form onSubmit={submitForm}>
                 <input
                     name="username"

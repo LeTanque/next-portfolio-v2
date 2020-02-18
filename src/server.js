@@ -12,13 +12,18 @@ const session = require("express-session");
 // const uid = require("uid-safe");
 const connectEnsureLogin = require("connect-ensure-login");
 const passport = require("passport");
-const Strategy = require('passport-local').Strategy;
+const LocalStrategy = require('passport-local').Strategy;
+// const jwt = require("jsonwebtoken");
+// const verifyPassword = require("./middleware/verifyPassword");
 // Database
 const db = require("./data/models");
+const UsersDb = require("./data/connection");
 // Routes
 // const auth0Routes = require("./api/auth0-routes");
-const authRoutes = require("./api/auth-routes");
-const thoughtsAPI = require("./api/thoughts-api");
+const authApi = require("./api/auth");
+const thoughtsApi = require("./api/thoughts");
+const profileApi = require("./api/profile");
+const skillsApi = require("./api/skills");
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({
@@ -67,30 +72,14 @@ app.prepare().then(() => {
     // passport.serializeUser((user, done) => done(null, user));
     // passport.deserializeUser((user, done) => done(null, user));
 
-
-    // 3 - Alternate local strategy
-    // The local strategy require a `verify` function which receives the credentials
-    // (`username` and `password`) submitted by the user.  The function must verify
-    // that the password is correct and then invoke `cb` with a user object, which
-    // will be set at `req.user` in route handlers after authentication.
-    passport.use(new Strategy(
-        (username, password, done) => {
-            db.users.findByUsername(username, (err, user) => {
-                if (err) { return done(err); }
-                if (!user) { return done(null, false); }
-                if (user.password != password) { return done(null, false); }
-                return done(null, user);
-            });
-        }
-    ));
     // 4 - Alternate configuring Passport
     // In order to restore authentication state across HTTP requests, Passport needs
     // to serialize users into and deserialize users out of the session.  The
     // typical implementation of this is as simple as supplying the user ID when
     // serializing, and querying the user record by ID from the database when
     // deserializing.
-    passport.serializeUser((user, cb) => {
-        cb(null, user.id);
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
     });
     passport.deserializeUser((id, cb) => {
         db.users.findById(id, (err, user) => {
@@ -99,19 +88,71 @@ app.prepare().then(() => {
             });
     });
     
-
-    
-
     // 5 - adding Passport and authentication routes
     // Initialize Passport and restore authentication state, if any, from the
     // session.
     server.use(passport.initialize());
     server.use(passport.session());
 
+
+    // const findById = (id, cb) => {
+    //     process.nextTick(() => {
+    //         let idx = id - 1;
+    //         if (records[idx]) {
+    //             cb(null, records[idx]);
+    //         } else {
+    //             cb(new Error("User " + id + " does not exist"));
+    //         }
+    //     });
+    // };
+    
+
+    // 3 - Alternate local strategy
+    // The local strategy require a `verify` function which receives the credentials
+    // (`username` and `password`) submitted by the user.  The function must verify
+    // that the password is correct and then invoke `cb` with a user object, which
+    // will be set at `req.user` in route handlers after authentication.
+    // passport.use(new LocalStrategy(
+    //     (username, password, done) => {
+    //         db.users.findByUsername(username, (err, user) => {
+    //             if (err) { return done(err); }
+    //             if (!user) { return done(null, false); }
+    //             if (user.password != password) { return done(null, false); }
+    //             return done(null, user);
+    //         });
+    //     }
+    // ));
+    const checkUserExists = async (username) => {
+        const findById = await UsersDb("users")
+            .where({ username: username })
+            .first();
+        if(findById) {
+            return findById
+        } else {
+            return { message: "No user exists" }
+        }
+    }
+    passport.use(new LocalStrategy(
+        (username, password, done) => {
+            checkUserExists(username)
+            .then(user => {
+                if (!user || user.password != password) {
+                    done(null, false, { message: "Invalid username/password" });
+                } else {
+                    done(null, user);
+                }
+            })
+            .catch(e => done(e));
+        })
+    )
+
+
     // Routes
     // server.use(auth0Routes);
-    server.use(authRoutes);
-    server.use(thoughtsAPI);
+    server.use(authApi);
+    server.use(thoughtsApi);
+    server.use(profileApi);
+    server.use(skillsApi);
 
     // 6 - you are restricting access to some routes
     const restrictAccess = (req, res, next) => {
@@ -120,7 +161,7 @@ app.prepare().then(() => {
         next();
     };
 
-    server.use("/profile", restrictAccess);
+    server.use("/thoughts", restrictAccess);
     server.use("/share-thought", restrictAccess);
 
     // handling everything else with Next.js

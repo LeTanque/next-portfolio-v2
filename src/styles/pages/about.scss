@@ -17,18 +17,16 @@ $paddingRightAndAfterWidth: 36px;
             .block--about {
                 width: 62%;
                 height: 100%;
-                background-color: $cosmic;
+                background-color: $bg-color-alt;
                 padding-right: $paddingRightAndAfterWidth;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 transform: skewX(12deg);
                 @include boxShadowOuter;
-                // display: none;
-                // @include anima-openUp($runtime: 300ms);
                 &::after {
                     content: '';
-                    background-color: $fire;
+                    background-color: $secondary;
                     position: absolute;
                     transform: skewX(0deg);
                     width: $paddingRightAndAfterWidth;
@@ -41,7 +39,6 @@ $paddingRightAndAfterWidth: 36px;
                     padding: 20px;
                     font-size: 2.4rem;
                     transform: skewX(-12deg);
-                    // @include anima-fadeIn($runtime: 900ms);
                 }
             }
         }

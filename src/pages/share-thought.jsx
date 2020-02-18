@@ -17,7 +17,7 @@ export default function ShareThought() {
                 message
             })
         });
-        Router.push("/");
+        Router.push("/thoughts");
     }
 
     return (

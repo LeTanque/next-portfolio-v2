@@ -15,7 +15,7 @@
     .block__project-header {
         padding: 75px 25px 25px 25px;
         width: 100%;
-        color: $isabelline;
+        color: $text-dark;
         font-size: 2.4rem;
         display: flex;
         align-items: flex-end;
@@ -71,7 +71,7 @@
                 font-size: 2.4rem;
             }
             i {
-                color: $licorice;
+                color: $text-light;
             }
         }
         .block__tape.project-one {

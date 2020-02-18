@@ -2,20 +2,30 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin|Permanent+Marker|Roboto+Condensed:700&display=swap');
 
 
+// Colors
+@import "./color/_opencolor.scss";
+@import "./color/_helpers.scss";
+@import "./color/_palette.scss";
+
 
 // Vars and Mixins
 @import './global/_reset.scss';
-@import './global/_variables.scss';
+@import './global/_mediaqueries.scss';
 @import "./global/_fonts.scss";
 @import './global/_global.scss';
 @import './global/_buttons.scss';
 @import './global/_inputs.scss';
-@import './global/_mixins.scss';
+@import './global/_paragraphs.scss';
 
 @import './global/_nprogress.scss';
 @import './global/_transitions.scss';
 @import "./global/_keyframes.scss";
 @import "./global/_animations.scss";
+
+@import './global/_mixins.scss';
+
+
+
 
 
 // Views Here
@@ -24,6 +34,8 @@
 @import "./pages/about.scss";
 @import "./pages/skills.scss";
 @import "./pages/profile.scss";
+@import "./pages/thoughts.scss";
+@import "./pages/login.scss";
 
 @import "./pages/admin.scss";
 @import "./pages/admin/forms.scss";
@@ -47,6 +59,5 @@
 @import "./components/dnd-draglayer/Draglayer.scss";
 
 @import "./components/threejs-render/ThreeContainer.scss";
-
 
 

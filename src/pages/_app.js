@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import App from "next/app";
-import Navbar from "../components/Navbar";
+import Nav from "../components/Nav";
+
+// import { PageTransition } from "next-page-transitions";
 
 import "../styles/base.scss";
 
 
 const MyComponent = (props) => {
-    const { Component, state } = props;
+    const { Component, state, router } = props;
     const [ userState, setUserState ] = useState(state)
 
     useEffect(() => {
@@ -16,7 +18,7 @@ const MyComponent = (props) => {
 
     return (
         <>
-            <Navbar {...props} userState={userState} />
+            <Nav userState={userState} router={router.route}/>
             <Component {...props} userState={userState} setUserState={setUserState} />
         </>
     )
@@ -26,7 +28,7 @@ const MyComponent = (props) => {
 
 export default class MyApp extends App {
     static async getInitialProps(props) {
-        const { Component, ctx } = props;
+        const { Component, ctx, router } = props;
 
         let pageProps = {};
 
@@ -47,19 +49,21 @@ export default class MyApp extends App {
     }
 
     render() {
-        const { pageProps, Component } = this.props;
+        const { pageProps, Component, router } = this.props;
+
 
         let userSession = pageProps.session ? pageProps.session : null;
 
         const props = {
             ...pageProps,
             user: this.state.user,
+            router,
         };
 
         return (
             <>
                 <Head>
-                    <title>Next Passport Auth</title>
+                    <title>LeTanque</title>
                     <link rel="icon" href="/favicon.ico" />
                     <script
                         id="session"
