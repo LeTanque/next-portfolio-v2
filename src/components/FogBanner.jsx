@@ -35,8 +35,8 @@ const FogBanner = () => {
     }, []);
 
     return (
-        <>
-            <section className="section__index" style={{ backgroundImage: `url(/static/matthew-ronder-seid-xYd99V3S5aI-unsplash-medium.jpg)` }} >
+        <section className="section__foggy-container">
+            <section className="section__foggy" style={{ backgroundImage: `url(/static/matthew-ronder-seid-xYd99V3S5aI-unsplash-medium.jpg)` }} >
                 <div className="block__greeting"  >
                     {blockGreeting.display ? (
                         <strong>
@@ -53,7 +53,7 @@ const FogBanner = () => {
                     </div>
                 </section>
             ))}
-        </>
+        </section>
     )
 };
 

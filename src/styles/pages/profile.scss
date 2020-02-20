@@ -1,11 +1,15 @@
 
 
 .main__profile-card-container {
-    width: 100%;
     display: block;
     position: relative;
     top: 150px;
     margin-bottom: 50px;
+    overflow-x: hidden;
+    @media #{$mediumMax} {
+        padding: 0 40px;
+    }
+    
     .section__profile-card {
         background-color: $bg-color-alt;
         width: 100%;
@@ -14,15 +18,28 @@
         display: flex;
         flex-direction: column;
         padding: 10px 50px;
-        @media #{$tablet-small} {
-            padding: 25px 10%;
+        @media #{$smallMax} {
+            padding: 25px 5%;
+            width: calc(100% - 60px);
         }
         .block__profile-header {
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding-bottom: 20px;
-            padding-top: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            div {
+                color: $secondary;
+                font-family: $cursive-font;
+                font-size: 5rem;
+                line-height: 1;
+                padding-bottom: 20px;
+            }
+            h5 {
+                color: $text;
+                line-height: 1;
+            }
         }
         ul {
             overflow-wrap: break-word;
@@ -33,9 +50,9 @@
         .block__signature {
             font-family: $cursive-font;
             font-size: 3.4rem;
-            color: $primary;
+            color: $secondary;
             padding: 25px 0 50px 0;
-            @media  #{$tablet-small} {
+            @media  #{$smallMax} {
                 font-size: 2.4rem;
             }
         }

@@ -81,4 +81,13 @@ const Login = props => {
     );
 };
 
+
+Login.getInitialProps = async function () {
+    return { 
+        transitionType: 'none',
+        timeout: 0
+    }
+}
+
+
 export default Login;

@@ -48,7 +48,7 @@ const TextLooper = props => {
                     >
                         {skillsArray.map((entry, index) => (
                             <React.Fragment key={index + "-" + entry}>
-                                <h3 >
+                                <h3 className="block__text-payload">
                                     {skillsArray[index]}
                                 </h3>
                                 <SimpleIcons 

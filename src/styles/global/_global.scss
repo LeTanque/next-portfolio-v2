@@ -7,16 +7,12 @@ html {
 }
 
 body {
-    background-color: $bg-color;
     background-position: bottom;
     background-attachment: fixed;
-    color: $text;
     button:focus {
         outline: none;
     }
 }
-
-
 
 li[class^='link'], li[class*=' link'] {
     text-decoration: none;
@@ -29,7 +25,6 @@ li[class^='link'], li[class*=' link'] {
         transition: color linear 600ms;
     }
 }
-
 
 p, body, div, section {
     font-family: $body-font;
@@ -112,6 +107,4 @@ ul {
 li {
     text-decoration: none;
 }
-
-
 

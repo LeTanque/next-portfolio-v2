@@ -3,10 +3,12 @@
 //media queries
 $mobile: "only screen and (max-width:500px)";
 $tablet: "only screen and (max-width:1200px)";
-$tablet-small: "only screen and (max-width:800px)";
 $tablet-short: "only screen and (max-height:550px)";
 $desktop: "only screen and (min-width:1200px)";
 
+$largeMax: "only screen and (max-width:1400px)";
+$mediumMax: "only screen and (max-width:1000px)";
+$smallMax: "only screen and (max-width:800px)";
 
 // // Use like this
 // .class {

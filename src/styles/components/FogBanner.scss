@@ -1,0 +1,115 @@
+
+
+
+.section__foggy-container {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: fixed;
+    .section__foggy {
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        .block__greeting {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            strong {
+                font-size: 10vw;
+                color: $text-emphasis;
+                text-shadow: 0 0 24px $shadows;
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include anima-spaceOut;
+                @media #{$desktop} {
+                    font-size: 15rem;
+                }
+                span {
+                    font-family: $body-font;
+                    font-size: 5vw;
+                    font-style: italic;
+                    letter-spacing: 0;
+                    animation: none;
+                    @media #{$desktop} {
+                        font-size: 7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.section__scroller-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .block__scroller {
+        top: 0;
+        opacity: 0.18;
+        z-index: 0;
+        position: absolute;
+        strong {
+            font-family: $cursive-font;
+            font-size: 100vw;
+            text-transform: uppercase;
+            @include foggyLetters;
+        }
+    }
+}
+
+.section__scroller-container.scroller-top {
+    top: -80vh;
+    transform: rotate(-25deg);
+    .block__scroller {
+        transform: translateX(-70%);
+        @include anima-bigScroll($runtime: 55s, $aniname: bigScrollTop);
+    }
+}
+
+.section__scroller-container.scroller-middle {
+    top: -15vh;
+    transform: rotate(-11deg);
+    .block__scroller {
+        transform: translateX(80%);
+        @include anima-bigScroll($runtime: 60s, $aniname: bigScrollMiddle);
+    }
+}
+
+.section__scroller-container.scroller-bottom {
+    bottom: -10vh;
+    transform: rotate(-6deg);
+    .block__scroller {
+        transform: translateX(-70%);
+        @include anima-bigScroll($runtime: 47s, $aniname: bigScrollBottom);
+    }
+}
+
+
+.block__hidden-link {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    z-index: 10;
+    a {
+        opacity: 0.05;
+        color: $shadows;
+        cursor: unset;
+        svg {
+            font-size: 5rem;
+            @include smoothTransition();
+            &:hover {
+                color: $secondary;
+                opacity: 0;
+            }
+        }
+    }
+}

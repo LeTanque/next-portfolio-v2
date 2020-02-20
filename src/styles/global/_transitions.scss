@@ -57,10 +57,9 @@ $fadeFastTrans: opacity ease-in-out 300ms, filter ease-out 300ms;
 
 
 // None
-.page-transition-none-enter { opacity: 1 }
-.page-transition-none-enter-active { opacity: 1 }
-.page-transition-none-enter-done { opacity: 1 }
-.page-transition-none-exit { opacity: 1 }
-.page-transition-none-exit-active { opacity: 1 }
-
+.page-transition-none-enter { opacity: 1; }
+.page-transition-none-enter-active { opacity: 1; }
+.page-transition-none-enter-done { opacity: 1; }
+.page-transition-none-exit { opacity: 1; }
+.page-transition-none-exit-active { opacity: 1; }
 

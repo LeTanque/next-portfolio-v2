@@ -26,13 +26,15 @@ const Profile = props => {
 
     return (
         <main className="main__profile-card-container" >
-            <TextLooper intervals={[1900, 2200]}  alignment={"left"} namesOfSkills={userSkills.skills.technology}  message={"I love building with"} />
             <section className="section__profile-card" >
                 <div className="block__profile-header">
-                    <h2>Hello!</h2>
+                    <div>Hello!</div>
+                    <h5>My name is Frank Martinez</h5>
                 </div>
+            </section>
+            <TextLooper intervals={[1900, 2200]}  alignment={"right"} namesOfSkills={userSkills.skills.technology}  message={""} />
+            <section className="section__profile-card" >
                 <div className="block__profile-body">
-                    <h5>My name is Frank Martinez.</h5>
                     {userProfile && userProfile.profile.slice(0,2).map(item => {
                         return (
                             <p key={item.id}>
@@ -42,7 +44,7 @@ const Profile = props => {
                     })}
                 </div>
             </section>
-            <TextLooper intervals={[2800, 3200]}   alignment={"right"} namesOfSkills={userSkills.skills.personal}  message={"I love building with"} />
+            <TextLooper intervals={[2800, 3200]}   alignment={"left"} namesOfSkills={userSkills.skills.personal}  message={"I love building with"} />
             <section className="section__profile-card" >
                 <div className="block__profile-body">
                     {userProfile && userProfile.profile.slice(2,5).map(item => {
