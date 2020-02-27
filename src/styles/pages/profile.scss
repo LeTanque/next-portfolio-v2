@@ -17,9 +17,9 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        padding: 10px 50px;
+        padding: 0 50px;
         @media #{$smallMax} {
-            padding: 25px 5%;
+            padding: 0 5%;
             width: calc(100% - 60px);
         }
         .block__profile-header {
