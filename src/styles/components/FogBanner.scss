@@ -6,6 +6,7 @@
     width: 100%;
     display: block;
     position: fixed;
+    overflow: hidden;
     .section__foggy {
         background-size: cover;
         background-position: center;
@@ -16,6 +17,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             position: absolute;
             height: 100%;
             width: 100%;
@@ -54,7 +56,7 @@
     height: 100%;
     .block__scroller {
         top: 0;
-        opacity: 0.18;
+        opacity: 0.39;
         z-index: 0;
         position: absolute;
         strong {
@@ -70,8 +72,8 @@
     top: -80vh;
     transform: rotate(-25deg);
     .block__scroller {
-        transform: translateX(-70%);
-        @include anima-bigScroll($runtime: 55s, $aniname: bigScrollTop);
+        transform: translateX(-85%);
+        @include anima-bigScroll($runtime: 15s, $aniname: bigScrollTop);
     }
 }
 
@@ -79,8 +81,8 @@
     top: -15vh;
     transform: rotate(-11deg);
     .block__scroller {
-        transform: translateX(80%);
-        @include anima-bigScroll($runtime: 60s, $aniname: bigScrollMiddle);
+        transform: translateX(85%);
+        @include anima-bigScroll($runtime: 20s, $aniname: bigScrollMiddle);
     }
 }
 
@@ -89,7 +91,7 @@
     transform: rotate(-6deg);
     .block__scroller {
         transform: translateX(-70%);
-        @include anima-bigScroll($runtime: 47s, $aniname: bigScrollBottom);
+        @include anima-bigScroll($runtime: 25s, $aniname: bigScrollBottom);
     }
 }
 

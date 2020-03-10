@@ -1,0 +1,41 @@
+.section__profile-scroll {
+    font-family: $body-font;
+    text-align: center;
+    max-width: 100%;
+    position: relative;
+    .block__fade-in-section {
+        opacity: 0;
+        transform: translateY(10vh);
+        visibility: hidden;
+        transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+        will-change: opacity, transform, visibility;
+    }
+    .block__fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
+
+    // Specific content containers
+    .block__fade-in-section.fog-banner.is-visible {
+        height: 100vh;
+    }
+
+    .block__fade-in-section.simplebox.is-visible {
+        .block__scroll-box {
+            height: 230px;
+            span {
+                background-color: rgba(255, 255, 255, 0.5);
+                display: inline-block;
+                padding: 5px;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    .block__fade-in-section.whois.is-visible {
+        height: 100%;
+    }
+    
+}    
+

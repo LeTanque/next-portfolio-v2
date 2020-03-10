@@ -1,7 +1,7 @@
-import FogBanner from "../components/FogBanner";
+// import FogBanner from "../components/FogBanner";
+import ProfileScroll from "../components/ProfileScroll";
 
-
-const Index = () => <FogBanner />
+const Index = () => <ProfileScroll />
 
 
 Index.getInitialProps = async function () {

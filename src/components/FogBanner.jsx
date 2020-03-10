@@ -16,7 +16,7 @@ const FogBanner = () => {
         transition: `${fogScrollSettings.fadeIn}ms ease opacity 0ms`,
     };
     const [ fogScrollStyle, setFogScrollStyle ] = useState({ ...foggyLettersClear });
-    const fogScrollerClasses = [ "scroller-top", "scroller-middle", "scroller-bottom", ];
+    const fogScrollerClasses = [ "scroller-top", "scroller-middle" ];
 
     // loading trigger to turn fog on
     useEffect(() => {

@@ -45,8 +45,8 @@
 }
 
 @mixin foggyLetters() {
-    color: rgba($white, 0.05);
-    text-shadow: 0 0 88px $coolgrey;
+    color: rgba($white, 0);
+    text-shadow: 0 0 88px $white;
     user-select: none;
 }
 
