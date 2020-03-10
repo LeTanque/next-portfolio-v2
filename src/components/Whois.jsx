@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import TextLooper from "./TextLooper";
-import skills from "../data/Skills";
 
 
 const Whois = props => {
+    const { skills } = props;
     const [ userSkills, setUserSkills ] = useState(null);
 
 

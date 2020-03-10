@@ -2,11 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import FogBanner from "./FogBanner";
 import Whois from "./Whois";
 import Projects from "./Projects";
+import skills from "../data/Skills";
 
 const FadeInSection = props => {
     const { frame } = props;
     
-    const [ userSkills, setUserSkills ] = useState(null);
     const [ isVisible, setVisible ] = useState(false);
     const domRef = useRef();
 
@@ -15,13 +15,6 @@ const FadeInSection = props => {
             entries.forEach(entry => setVisible(entry.isIntersecting));
         });
         observer.observe(domRef.current);
-        setUserSkills({ 
-            skills: {
-                technology: skills.filter(skill => skill.type === "technology"),
-                personal: skills.filter(skill => skill.type === "personal"),
-                year: skills.filter(skill => skill.type === "year"),
-            }
-        })
     }, []);
     
     return (
@@ -46,11 +39,11 @@ const ProfileScroll = () => {
             </FadeInSection>
 
             <FadeInSection frame="whois" >
-                <Whois className="block__scroll-box" />
+                <Whois className="block__scroll-box" skills={skills} />
             </FadeInSection>
             
             <FadeInSection frame="projects" >
-                <Projects className="block__scroll-box" />
+                <Projects className="block__scroll-box" skills={skills} />
             </FadeInSection>
 
         </section>

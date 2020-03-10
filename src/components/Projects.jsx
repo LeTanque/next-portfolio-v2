@@ -1,13 +1,21 @@
 import { useEffect, useState } from "react";
+import TextLooper from "./TextLooper";
 
 const Projects = props => {
-    // const [ userSkills, setUserSkills ] = useState(null);
-
+    const { skills } = props;
+    const [ userSkills, setUserSkills ] = useState(null);
 
     useEffect(() => {
+        setUserSkills({ 
+            skills: {
+                technology: skills.filter(skill => skill.type === "technology"),
+                personal: skills.filter(skill => skill.type === "personal"),
+                year: skills.filter(skill => skill.type === "year"),
+            }
+        })
     }, [])
 
-    // if (!userSkills) return <h2>Loading</h2>;
+    if (!userSkills) return <h2>Loading</h2>;
 
     return (
         <main className="main__projects-container" >
