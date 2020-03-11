@@ -3,7 +3,7 @@
 .main__projects-container {
     display: block;
     position: relative;
-    top: 150px;
+    top: 0;
     margin-bottom: 50px;
     overflow: hidden;
     @media #{$mediumMax} {
@@ -22,6 +22,21 @@
             padding: 0 5%;
             width: calc(100% - 60px);
         }
+        
+        .block__project-header {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+    }
+    .block__project {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
     }
 }
 

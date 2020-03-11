@@ -23,13 +23,21 @@
 
     .block__fade-in-section.simplebox.is-visible {
         .block__scroll-box {
-            height: 230px;
+            height: 50px;
+            background-color: $bg-color-alt;
             span {
                 background-color: rgba(255, 255, 255, 0.5);
                 display: inline-block;
                 padding: 5px;
                 border-radius: 3px;
             }
+        }
+        .block__scroll-box.one {
+            box-shadow: 0 -15px 33px 3px rgba(0,0,0,0.25), 0 -1px 27px 5px rgba(0,0,0,1);
+        }
+        .block__scroll-box.two {
+            background-color: $secondary;
+            height: 3px;
         }
     }
 

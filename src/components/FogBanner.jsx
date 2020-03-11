@@ -16,7 +16,10 @@ const FogBanner = () => {
         transition: `${fogScrollSettings.fadeIn}ms ease opacity 0ms`,
     };
     const [ fogScrollStyle, setFogScrollStyle ] = useState({ ...foggyLettersClear });
-    const fogScrollerClasses = [ "scroller-top", "scroller-middle" ];
+    const fogScrolls = [ 
+        { pos: "scroller-top", message: "can you see me?" }, 
+        { pos: "scroller-middle", message: "say hi! txt 408 800 5266" }
+    ];
 
     // loading trigger to turn fog on
     useEffect(() => {
@@ -46,10 +49,10 @@ const FogBanner = () => {
                 </div>
             </section>
 
-            {fogScrollerClasses.map((position, index) => (
-                <section className={`section__scroller-container ${position}`} key={index}  style={fogScrollStyle}  >
+            {fogScrolls.map((scroll, index) => (
+                <section className={`section__scroller-container ${scroll.pos}`} key={index}  style={fogScrollStyle}  >
                     <div className="block__scroller">
-                        <strong>frank le tanque portfolio</strong>
+                        <strong>{scroll.message}</strong>
                     </div>
                 </section>
             ))}

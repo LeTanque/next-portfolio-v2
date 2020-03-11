@@ -1,31 +1,31 @@
 import { useEffect, useState } from "react";
-import TextLooper from "./TextLooper";
 
 const Projects = props => {
-    const { skills } = props;
-    const [ userSkills, setUserSkills ] = useState(null);
+    const { projects } = props;
+    const [ userProjects, setUserProjects ] = useState(null);
 
     useEffect(() => {
-        setUserSkills({ 
-            skills: {
-                technology: skills.filter(skill => skill.type === "technology"),
-                personal: skills.filter(skill => skill.type === "personal"),
-                year: skills.filter(skill => skill.type === "year"),
-            }
-        })
+        setUserProjects(projects)
     }, [])
 
-    if (!userSkills) return <h2>Loading</h2>;
+    if (!userProjects) return <h2>Loading</h2>;
+    console.log('userProjects --> ', userProjects);
+    
 
     return (
         <main className="main__projects-container" >
             <section className="section__projects" >
-                <div className="block__profile-header">
-                    <h1>Frank Martinez</h1>
-                    <h5>Full-stack web developer</h5>
+                <div className="block__project-header">
+                    <h2>Projects</h2>
                 </div>
             </section>
-            <TextLooper intervals={[1900, 2200]}  alignment={"left"} namesOfSkills={userSkills.skills.year}  message={""} />
+            <div className="block__project">
+                {userProjects && userProjects.map(project => (
+                    <React.Fragment key={project.id} >
+                        <h3>{project.name}</h3>
+                    </React.Fragment>
+                ))}
+            </div>
         </main>
     );
 }

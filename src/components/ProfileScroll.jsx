@@ -3,6 +3,7 @@ import FogBanner from "./FogBanner";
 import Whois from "./Whois";
 import Projects from "./Projects";
 import skills from "../data/Skills";
+import projects from "../data/Projects";
 
 const FadeInSection = props => {
     const { frame } = props;
@@ -35,7 +36,13 @@ const ProfileScroll = () => {
             </FadeInSection>
 
             <FadeInSection frame="simplebox" >
-                <div className="block__scroll-box" style={{ backgroundColor: "dodgerblue" }}></div>
+                <div className="block__scroll-box one" ></div>
+            </FadeInSection>
+            <FadeInSection frame="simplebox" >
+                <div className="block__scroll-box two" ></div>
+            </FadeInSection>
+            <FadeInSection frame="simplebox" >
+                <div className="block__scroll-box" ></div>
             </FadeInSection>
 
             <FadeInSection frame="whois" >
@@ -43,7 +50,7 @@ const ProfileScroll = () => {
             </FadeInSection>
             
             <FadeInSection frame="projects" >
-                <Projects className="block__scroll-box" skills={skills} />
+                <Projects className="block__scroll-box" projects={projects} />
             </FadeInSection>
 
         </section>
