@@ -34,7 +34,7 @@ export default [
         imageUrl:
             "https://res.cloudinary.com/letanque/image/upload/v1584387527/Screen_Shot_2020-03-16_at_12.15.31_PM_tbgewm.png",
         date: "March, 2019"
-    }
+    },
     {
         id: 3,
         name: "MTG Magical",
