@@ -6,10 +6,12 @@ import FogBanner from "./FogBanner";
 import Whois from "./Whois";
 import Projects from "./Projects";
 import Summary from "./Summary";
+import Contact from "./Contact";
 
 import skills from "../../data/Skills";
 import projects from "../../data/Projects";
 import summary from "../../data/Summary";
+import contact from "../../data/Contact";
 
 
 const FadeInSection = props => {
@@ -65,6 +67,12 @@ const ProfileScroll = () => {
             <FadeInSection frame="projects" >
                 <Element  name="projects" >
                     <Projects className="block__scroll-box" projects={projects} />
+                </Element>
+            </FadeInSection>
+
+            <FadeInSection frame="contact" >
+                <Element  name="contact" >
+                    <Contact className="block__scroll-box" contact={contact} />
                 </Element>
             </FadeInSection>
 
