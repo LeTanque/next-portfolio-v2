@@ -1,9 +1,16 @@
 import { useEffect, useState, useRef } from "react";
+import { Element } from 'react-scroll';
+// import { GiTank } from "react-icons/gi";
+
 import FogBanner from "./FogBanner";
 import Whois from "./Whois";
 import Projects from "./Projects";
-import skills from "../data/Skills";
-import projects from "../data/Projects";
+import Summary from "./Summary";
+
+import skills from "../../data/Skills";
+import projects from "../../data/Projects";
+import summary from "../../data/Summary";
+
 
 const FadeInSection = props => {
     const { frame } = props;
@@ -20,7 +27,7 @@ const FadeInSection = props => {
     
     return (
         <div
-            className={`block__fade-in-section ${frame ? frame : ""} ${isVisible ? "is-visible" : ""}`}
+            className={`block__fade-in-section ${frame ? frame : ""} ${isVisible ? "is-visible" : "is-visible"}`}
             ref={domRef}
         >
             {props.children}
@@ -46,11 +53,19 @@ const ProfileScroll = () => {
             </FadeInSection>
 
             <FadeInSection frame="whois" >
-                <Whois className="block__scroll-box" skills={skills} />
+                <Element  name="whois" >
+                    <Whois className="block__scroll-box" skills={skills} />
+                </Element>
             </FadeInSection>
             
+            <FadeInSection frame="summary" >
+                <Summary className="block__scroll-box" summary={summary} />
+            </FadeInSection>
+
             <FadeInSection frame="projects" >
-                <Projects className="block__scroll-box" projects={projects} />
+                <Element  name="projects" >
+                    <Projects className="block__scroll-box" projects={projects} />
+                </Element>
             </FadeInSection>
 
         </section>

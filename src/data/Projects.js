@@ -20,7 +20,7 @@ export default [
         iconUrl:
             "https://res.cloudinary.com/letanque/image/upload/v1583875267/Favicon_ypavsw.png",
         imageUrl:
-            "https://res.cloudinary.com/letanque/image/upload/v1583875732/Screen_Shot_2020-03-10_at_2.28.34_PM_hubebv.png",
+            "https://res.cloudinary.com/letanque/image/upload/v1584404447/revitalize-homepage_tvbbar.png",
         date: "November, 2019"
     },
     {
@@ -42,7 +42,7 @@ export default [
         link: "https://mtg-magical.netlify.com/",
         github: "https://github.com/LeTanque/MTG-card-collection",
         iconUrl:
-            "https://res.cloudinary.com/letanque/image/upload/v1584387625/magical-screenshot-03_ldefwg.png",
+            "https://res.cloudinary.com/letanque/image/upload/v1584402186/magical-unglued-icon_juxtc3.png",
         imageUrl:
             "https://res.cloudinary.com/letanque/image/upload/v1584387626/magical-screenshot-02_ot49x9.png",
         date: "July, 2019"

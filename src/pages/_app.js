@@ -18,7 +18,7 @@ const MyComponent = (props) => {
     
     return (
         <>
-            {/* <Nav userState={userState} router={router.route}/> */}
+            <Nav userState={userState} router={router.route}/>
             <PageTransition
                 timeout={props.timeout}
                 classNames={`page-transition-${props.transitionType}`}

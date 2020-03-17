@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TextLooper from "./TextLooper";
+import TextLooper from "../TextLooper";
 
 
 const Whois = props => {
@@ -24,7 +24,7 @@ const Whois = props => {
             <section className="section__profile-card" >
                 <div className="block__profile-header">
                     <h1>Frank Martinez</h1>
-                    <h5>Full-stack web developer</h5>
+                    <h5>Software Developer</h5>
                 </div>
             </section>
             <TextLooper intervals={[1900, 2200]}  alignment={"right"} namesOfSkills={userSkills.skills.technology}  message={""} />

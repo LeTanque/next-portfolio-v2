@@ -72,8 +72,8 @@
     top: -80vh;
     transform: rotate(-25deg);
     .block__scroller {
-        transform: translateX(-80%);
-        @include anima-bigScroll($runtime: 17s, $aniname: bigScrollTop);
+        transform: translateX(-55%);
+        @include anima-bigScroll($runtime: 29s, $aniname: bigScrollTop);
     }
 }
 

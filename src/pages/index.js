@@ -1,5 +1,5 @@
 // import FogBanner from "../components/FogBanner";
-import ProfileScroll from "../components/ProfileScroll";
+import ProfileScroll from "../components/SinglePageScroll/ProfileScroll";
 
 const Index = () => <ProfileScroll />
 

@@ -40,9 +40,51 @@
         padding: 0 50px;
         width: 100%;
         max-width: 800px;
+        margin: 0 auto;
+        margin-top: 30px;
         @media #{$smallMax} {
             padding: 0 5%;
             width: calc(100% - 60px);
+        }
+        .block__single-project {
+            margin: 20px 0;
+
+            .block__single-project-header {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+                .img__project-icon {
+                    width: 20px;
+                    margin: 5px 10px 5px 0px;
+                }
+            }
+            .block__single-project-description, .block__single-project-description p {
+                text-align: left;
+                font-size: 1.6rem;
+                margin-bottom: 10px;
+                padding: 10px;
+                .block__project-link {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    margin-left: 10px;
+                    svg {
+                        margin-right: 10px;
+                    }
+                    .link__project {
+                        @include link();
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            .block__project-image-container {
+                width: 100%;
+                .img__project-image {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }

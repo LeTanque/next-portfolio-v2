@@ -11,8 +11,8 @@
     "start": "NODE_ENV=production node ./src/server.js"
   },
   "engines": {
-    "node":"10.15.3",
-    "npm":"6.13.6"
+    "node": "10.15.3",
+    "npm": "6.13.6"
   },
   "keywords": [],
   "author": "letanque",
@@ -44,6 +44,7 @@
     "react-dom": "^16.12.0",
     "react-html-parser": "^2.0.2",
     "react-icons": "^3.9.0",
+    "react-scroll": "^1.7.16",
     "react-text-loop": "^2.3.0",
     "simple-icons-react-component": "github:letanque/simple-icons-react-component#master",
     "sqlite3": "^4.1.1",

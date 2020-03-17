@@ -5,7 +5,7 @@
     position: relative;
     .block__fade-in-section {
         opacity: 0;
-        transform: translateY(10vh);
+        transform: translateY(1vh);
         visibility: hidden;
         transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
         will-change: opacity, transform, visibility;
