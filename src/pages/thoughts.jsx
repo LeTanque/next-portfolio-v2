@@ -1,5 +1,5 @@
 import fetch from "isomorphic-fetch";
-import Thought from "../components/Thought";
+import Thought from "../components/Thoughts/Thought";
 
 
 
