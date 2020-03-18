@@ -4,7 +4,7 @@ import { Element } from 'react-scroll';
 
 import FogBanner from "./FogBanner";
 import Whois from "./Whois";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import Summary from "./Summary";
 import Contact from "./Contact";
 
@@ -38,6 +38,8 @@ const FadeInSection = props => {
 }
 
 const ProfileScroll = () => {
+    
+
     return (
         <section className="section__profile-scroll">
             <FadeInSection frame="fog-banner" >
@@ -50,9 +52,9 @@ const ProfileScroll = () => {
             <FadeInSection frame="simplebox" >
                 <div className="block__scroll-box two" ></div>
             </FadeInSection>
-            <FadeInSection frame="simplebox" >
+            {/* <FadeInSection frame="simplebox" >
                 <div className="block__scroll-box" ></div>
-            </FadeInSection>
+            </FadeInSection> */}
 
             <FadeInSection frame="whois" >
                 <Element  name="whois" >

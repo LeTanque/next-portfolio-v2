@@ -13,6 +13,7 @@ $snow-white: #fff;
 // old
 $licorice: #111111;
 $cosmic: #33337f;
+$teal: #2c6ba5;
 $glow: #d18485;
 $ember: #752b2c;
 $pastegrey: #cccccc;
@@ -41,7 +42,7 @@ $beige: #f2f3d9;
 // 
 // System
 // #3. Drop the Neutral Neutrals
-$primary: $shadowblue;
+$primary: $teal;
 $secondary: $blaze;
 
 $bg-color: $licorice;
@@ -57,13 +58,16 @@ $shadows: $licorice;
 
 $system: $mirage;
 
-$link: $secondary;
-$linkactive: complement($secondary);
+$link: $primary;
+$linkactive: $secondary;
 
 $button-bg: $secondary;
 $buttonactive-bg: complement($secondary);
 $button-fg: $bg-color;
 $buttonactive-fg: complement($bg-color);
+
+$header1: $subblack;
+$header2: $silver-lining;
 
 // //
 

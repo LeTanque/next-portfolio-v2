@@ -15,7 +15,7 @@ const Contact = props => {
         <main className="main__contact-container" >
             <section className="section__contact" >
                 <div className="block__contact-header">
-                    <h2>Contact</h2>
+                    <h3>Contact</h3>
                 </div>
             </section>
             <div className="block__contact">

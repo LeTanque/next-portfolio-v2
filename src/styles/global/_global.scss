@@ -14,17 +14,17 @@ body {
     }
 }
 
-li[class^='link'], li[class*=' link'] {
-    text-decoration: none;
-    color: $link;
-    user-select: none;
-    transition: color linear 600ms;
-    cursor: pointer;
-    &:hover, &:active {
-        color: $linkactive;
-        transition: color linear 600ms;
-    }
-}
+// li[class^='link'], li[class*=' link'] {
+//     text-decoration: none;
+//     color: $link;
+//     user-select: none;
+//     transition: color linear 600ms;
+//     cursor: pointer;
+//     &:hover, &:active {
+//         color: $linkactive;
+//         transition: color linear 600ms;
+//     }
+// }
 
 p, body, div, section {
     font-family: $body-font;
@@ -55,6 +55,7 @@ h2 {
 
 h3 {
     font-size: 2.4rem;
+    font-style: italic;
 }
 
 h4 {
@@ -72,8 +73,8 @@ h6 {
 hr {
     width: 100%;
     border: none;
-    border-top-color: $system;
-    border-top-width: 1px;
+    border-top-color: $bg-color-alt;
+    border-top-width: 2px;
     border-top-style: solid;
 }
 
@@ -87,15 +88,6 @@ hr {
     }
 }
 
-a svg, .link-icon svg {
-    &:hover {
-        color: $linkactive;
-    }
-    &:focus,
-    &:active {
-        color: $linkactive;
-    }
-}
 
 ul {
     list-style: disc;

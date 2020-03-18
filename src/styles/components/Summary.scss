@@ -3,21 +3,22 @@
 .main__summary-container {
     display: block;
     position: relative;
-    top: 0;
-    margin-bottom: 50px;
+    top: -50px;
+    // margin-bottom: 50px;
     overflow: hidden;
     @media #{$mediumMax} {
         padding: 0 40px;
     }
 
     .section__summary {
-        background-color: $bg-color-alt;
+        background-color: $header1;
+        color: $header2;
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        padding: 0 50px;
+        padding: 0 10px;
         @media #{$smallMax} {
             padding: 0 5%;
             width: calc(100% - 60px);
@@ -28,8 +29,7 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            padding-bottom: 30px;
-            padding-top: 30px;
+            padding: 10px 0;
         }
     }
     .block__summary {

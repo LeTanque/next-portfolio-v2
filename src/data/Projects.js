@@ -2,7 +2,7 @@ export default [
     {
         id: 0,
         name: "Lakeside Herbal Solutions",
-        description: "Closed source project for retail dispensary serving more than 1000 users a month. Fully responsive across almost any device, built with no framework, ~1 second load time with 3.2mb payload, custom bootstrap, HTML/CSS, minimal JS and PHP, integrated with store's POS system for real-time menu data.",
+        description: "Closed source project for retail dispensary serving more than 1000 users a month. Fully responsive on most devices, built with no framework, ~1 second load time with 3.2mb payload, custom bootstrap, HTML/CSS, minimal JS and PHP, integrated with store's POS system for real-time menu data.",
         link: "https://lakesideherbal.com",
         github: "",
         iconUrl:
