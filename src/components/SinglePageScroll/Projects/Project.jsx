@@ -48,7 +48,7 @@ const Project = props => {
         mediaMatch.addListener(handler);
         return () => mediaMatch.removeListener(handler);
     });
-    console.log('matches --> ', matches);
+
     return (
         <>
             <div  className="block__single-project">

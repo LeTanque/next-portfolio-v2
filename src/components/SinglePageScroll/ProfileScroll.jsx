@@ -18,19 +18,19 @@ const FadeInSection = props => {
     const { frame } = props;
     
     const [ isVisible, setVisible ] = useState(false);
-    const domRef = useRef();
+    // const domRef = useRef();
 
     useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setVisible(entry.isIntersecting));
-        });
-        observer.observe(domRef.current);
+        // const observer = new IntersectionObserver(entries => {
+        //     entries.forEach(entry => setVisible(entry.isIntersecting));
+        // });
+        // observer.observe(domRef.current);
     }, []);
     
     return (
         <div
             className={`block__fade-in-section ${frame ? frame : ""} ${isVisible ? "is-visible" : "is-visible"}`}
-            ref={domRef}
+            // ref={domRef}
         >
             {props.children}
         </div>

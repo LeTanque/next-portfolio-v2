@@ -81,6 +81,11 @@ hr {
 .display-none {
     display: none;
 }
+.hidden {
+    position: absolute;
+    bottom: -1000px;
+    left: -1000px;
+}
 
 .tab {
     &:hover {
