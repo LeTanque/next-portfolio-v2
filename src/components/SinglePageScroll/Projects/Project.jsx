@@ -10,9 +10,9 @@ const Project = props => {
 
     const [ visible, setVisible ] = useState({
         visible: false,
-        containerHeight: "55px",
-        containerBg: "rgba(17,17,17,0.95)",
-        imgMargin: "-175px auto 0 auto"
+        containerHeight: "100%",
+        containerBg: "rgba(17,17,17,0)",
+        imgMargin: "0 auto"
     })
 
     const pictureReveal = () => {
@@ -57,6 +57,23 @@ const Project = props => {
                     <h4>{project.name}</h4>
                 </div>
 
+                <div className="block__project-image-container" style={{ 
+                    height: visible.containerHeight,
+                    backgroundColor: visible.containerBg
+                }} >
+                    <img src={project.imageUrl} alt={project.name} className="img__project-image" style={{
+                        margin: visible.imgMargin
+                    }}/>
+                </div>
+
+                {/* <div className="block__project-image-action" >
+                    {visible.visible ? (
+                        <GoChevronUp onClick={pictureReveal} />
+                    ) : (
+                        <GoChevronDown onClick={pictureReveal} />
+                    )}
+                </div> */}
+
                 <div className="block__single-project-description">
                     <p>{project.description}</p>
                     <div className="block__project-link" >
@@ -69,25 +86,6 @@ const Project = props => {
                     ) : null}
                 </div>
 
-                <div className="block__project-image-container" style={{ 
-                    height: visible.containerHeight,
-                    backgroundColor: visible.containerBg
-                }} >
-                    <img src={project.imageUrl} alt={project.name} className="img__project-image" style={{
-                        margin: visible.imgMargin
-                    }}/>
-                </div>
-
-                <div className="block__project-image-action" >
-                    {visible.visible ? (
-                        <GoChevronUp onClick={pictureReveal} />
-                    ) : (
-                        <>
-                            {/* <div>preview</div> */}
-                            <GoChevronDown onClick={pictureReveal} />
-                        </>
-                    )}
-                </div>
             </div>
         </>
     );

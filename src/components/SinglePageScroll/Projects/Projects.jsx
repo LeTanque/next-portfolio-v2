@@ -28,9 +28,9 @@ const Projects = props => {
                             
                             project={project}
                         />
-                        {project.id === userProjects.length - 1 ? null : (
+                        {/* {project.id === userProjects.length - 1 ? null : (
                             <hr/>
-                        )}
+                        )} */}
                     </ React.Fragment>
                 ))}
             </div>

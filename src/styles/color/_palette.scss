@@ -36,38 +36,46 @@ $darkliver: #4C4C47;
 $shadowblue: #848FA5;
 $bone: #E5DCC5;
 $beige: #f2f3d9;
-//
+//Slack
+$slacksidebar: #333333;
+$slackbodybg: #1b1d21;
+$slackhilight: #4f9dda;
+$slackbutton: #cd6062;
+$slackactive: #7dcd66;
+$slackfg: #e8e9e8;
+$slackfgalt: #8d8d8d;
 
 
 // 
 // System
 // #3. Drop the Neutral Neutrals
-$primary: $teal;
-$secondary: $blaze;
+$primary: $slackhilight;
+$secondary: $slackbutton;
 
-$bg-color: $licorice;
-$bg-color-alt: $subblack;
+$bg-color: $slackbodybg;
+$bg-color-alt: $slacksidebar;
 
-$text: $white;
+$text: $slackfg;
+$text-alt: $slackfgalt;
 $text-emphasis: $white;
-$text-input: $raisin;
-$text-light: $white;
-$text-dark: $raisin;
+$text-input: $slackbodybg;
+$text-light: $slackfg;
+$text-dark: $slackbodybg;
 
-$shadows: $licorice;
+$shadows: $slackbodybg;
 
-$system: $mirage;
+$system: $slackfgalt;
 
-$link: $primary;
-$linkactive: $secondary;
+$link: $slackactive;
+$linkactive: $slackbutton;
 
-$button-bg: $secondary;
-$buttonactive-bg: complement($secondary);
-$button-fg: $bg-color;
-$buttonactive-fg: complement($bg-color);
+$button-bg: $slackfgalt;
+$buttonactive-bg: complement($slackfgalt);
+$button-fg: $slackfg;
+$buttonactive-fg: complement($slackfg);
 
-$header1: $subblack;
-$header2: $silver-lining;
+$header1: $slackbodybg;
+$header2: $slackfgalt;
 
 // //
 

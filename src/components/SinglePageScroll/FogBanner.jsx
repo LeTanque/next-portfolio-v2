@@ -43,7 +43,10 @@ const FogBanner = () => {
                 <div className="block__greeting"  >
                     {blockGreeting.display ? (
                         <strong>
-                            <span>le&nbsp;</span>tanque
+                            Frank
+                            <br />
+                            Martinez
+                            <div className="block__subtitle">Software Developer</div>
                         </strong>
                     ) : null}
                 </div>

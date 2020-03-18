@@ -49,18 +49,18 @@ const ProfileScroll = () => {
             <FadeInSection frame="simplebox" >
                 <div className="block__scroll-box one" ></div>
             </FadeInSection>
-            <FadeInSection frame="simplebox" >
+            {/* <FadeInSection frame="simplebox" >
                 <div className="block__scroll-box two" ></div>
-            </FadeInSection>
+            </FadeInSection> */}
             {/* <FadeInSection frame="simplebox" >
                 <div className="block__scroll-box" ></div>
             </FadeInSection> */}
 
-            <FadeInSection frame="whois" >
+            {/* <FadeInSection frame="whois" >
                 <Element  name="whois" >
                     <Whois className="block__scroll-box" skills={skills} />
                 </Element>
-            </FadeInSection>
+            </FadeInSection> */}
             
             <FadeInSection frame="summary" >
                 <Summary className="block__scroll-box" summary={summary} />

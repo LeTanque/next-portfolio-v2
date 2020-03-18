@@ -13,7 +13,8 @@
 
 @mixin anima-spaceOut($runtime: 1500ms, $delay: 0) {
     animation-duration: $runtime;
-    animation-timing-function: cubic-bezier(1, 0.49, 0, 1.36);
+    animation-timing-function: cubic-bezier(1, 0.49, 0, 3.25); // spread out further
+    // animation-timing-function: cubic-bezier(1, 0.49, 0, 1.36);
     // animation-timing-function: cubic-bezier(0.8, 0, 0.75, 0.68);
     animation-delay: $delay;
     animation-iteration-count: 1;

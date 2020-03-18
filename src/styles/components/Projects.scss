@@ -48,6 +48,9 @@
         }
         .block__single-project {
             margin: 20px 0 0 0;
+            padding: 20px;
+            background-color: $bg-color-alt;
+            border-radius: 10px;
 
             .block__single-project-header {
                 display: flex;
@@ -65,7 +68,7 @@
                 text-align: left;
                 font-size: 1.6rem;
 
-                padding: 10px 10px 20px 10px;
+                padding: 0px 10px 20px 10px;
                 background-color: $bg-color-alt;
                 .block__project-link {
                     display: flex;
@@ -88,14 +91,17 @@
                 overflow: hidden;
                 display: flex;
                 align-items: baseline;
+                justify-content: center;
                 transition: height 400ms ease, background-color 600ms ease;
-                box-shadow: black 0px 10px 25px -16px inset;
+                // margin-bottom: 10px;
                 .img__project-image { // Margin expands with component style
                     // margin: -175px auto 0 auto;
+                    // box-shadow: black 0px 10px 25px -16px outset;
+                    // background-color: $white;
                     width: 100%;
                     position: relative;
                     transition: margin 400ms ease;
-                    z-index: -1;
+                    z-index: 2;
                 }
             }
             .block__project-image-action {

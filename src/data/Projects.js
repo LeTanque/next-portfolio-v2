@@ -8,7 +8,7 @@ export default [
         iconUrl:
             "https://res.cloudinary.com/letanque/image/upload/v1583875610/greencross_ds9eez.png",
         imageUrl:
-            "https://res.cloudinary.com/letanque/image/upload/v1583875434/lakeside-logo-dark_1080x1080_k4shid.png",
+            "https://res.cloudinary.com/letanque/image/upload/v1584554616/lhsmockup_f3uyth.png",
         date: "December, 2018"
     },
     {
@@ -20,7 +20,7 @@ export default [
         iconUrl:
             "https://res.cloudinary.com/letanque/image/upload/v1583875267/Favicon_ypavsw.png",
         imageUrl:
-            "https://res.cloudinary.com/letanque/image/upload/v1584404447/revitalize-homepage_tvbbar.png",
+            "https://res.cloudinary.com/letanque/image/upload/v1584554926/revitamock_ncr6ag.png",
         date: "November, 2019"
     },
     {
@@ -32,7 +32,7 @@ export default [
         iconUrl:
             "https://res.cloudinary.com/letanque/image/upload/v1584387527/icon-webnoted256plusShadow_qqpwkc.png",
         imageUrl:
-            "https://res.cloudinary.com/letanque/image/upload/v1584387527/Screen_Shot_2020-03-16_at_12.15.31_PM_tbgewm.png",
+            "https://res.cloudinary.com/letanque/image/upload/v1584554926/lambdanotesmock_zr76px.png",
         date: "March, 2019"
     },
     {
@@ -44,7 +44,7 @@ export default [
         iconUrl:
             "https://res.cloudinary.com/letanque/image/upload/v1584402186/magical-unglued-icon_juxtc3.png",
         imageUrl:
-            "https://res.cloudinary.com/letanque/image/upload/v1584387626/magical-screenshot-02_ot49x9.png",
+            "https://res.cloudinary.com/letanque/image/upload/v1584554926/mtgmockup_q08f75.png",
         date: "July, 2019"
     }
 ];

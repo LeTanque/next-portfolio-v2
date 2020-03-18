@@ -30,16 +30,19 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
+                line-height: 0.85;
                 @include anima-spaceOut();
                 @media #{$desktop} {
                     font-size: 15rem;
                 }
-                span {
+                .block__subtitle {
                     font-family: $body-font;
-                    font-size: 5vw;
+                    font-size: 3.5vw;
                     font-style: italic;
                     letter-spacing: 0;
                     animation: none;
+                    color: $slackfg;
                     @media #{$desktop} {
                         font-size: 7rem;
                     }
@@ -56,14 +59,15 @@
     height: 100%;
     .block__scroller {
         top: 0;
-        opacity: 0.39;
+        opacity: 0.30;
         z-index: 0;
         position: absolute;
         strong {
+            color: rgba($white, 0.05);
             font-family: $cursive-font;
             font-size: 100vw;
             text-transform: uppercase;
-            @include foggyLetters;
+            user-select: none;
         }
     }
 }
@@ -72,17 +76,23 @@
     top: -80vh;
     transform: rotate(-25deg);
     .block__scroller {
-        transform: translateX(-55%);
-        @include anima-bigScroll($runtime: 29s, $aniname: bigScrollTop);
+        transform: translateX(-58%);
+        @include anima-bigScroll($runtime: 46s, $aniname: bigScrollTop);
+        strong {
+            text-shadow: 0 0 160px rgba($slackfgalt, 0.9);
+        }
     }
 }
 
 .section__scroller-container.scroller-middle {
     top: -15vh;
-    transform: rotate(-11deg);
+    transform: rotate(-22deg);
     .block__scroller {
-        transform: translateX(85%);
-        @include anima-bigScroll($runtime: 20s, $aniname: bigScrollMiddle);
+        transform: translateX(15%);
+        @include anima-bigScroll($runtime: 80s, $aniname: bigScrollMiddle);
+        strong {
+            text-shadow: 0 0 132px rgba($slackfg, 0.85);
+        }
     }
 }
 
@@ -92,6 +102,9 @@
     .block__scroller {
         transform: translateX(-70%);
         @include anima-bigScroll($runtime: 25s, $aniname: bigScrollBottom);
+        strong {
+            text-shadow: 0 0 88px $white;
+        }
     }
 }
 

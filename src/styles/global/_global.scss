@@ -55,7 +55,7 @@ h2 {
 
 h3 {
     font-size: 2.4rem;
-    font-style: italic;
+    // font-style: italic;
 }
 
 h4 {
@@ -73,7 +73,7 @@ h6 {
 hr {
     width: 100%;
     border: none;
-    border-top-color: $bg-color-alt;
+    border-top-color: $text-alt;
     border-top-width: 2px;
     border-top-style: solid;
 }

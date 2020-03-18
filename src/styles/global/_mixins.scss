@@ -56,11 +56,6 @@
     }
 }
 
-@mixin foggyLetters() {
-    color: rgba($white, 0);
-    text-shadow: 0 0 88px $white;
-    user-select: none;
-}
 
 
 @mixin smoothTransition($transTime: 300ms) {

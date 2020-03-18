@@ -28,7 +28,7 @@ const Nav = props => {
         <section className={`section__nav route-${currentNavLocation}`} >
             <div className="block__navbar-nav" >
                 <nav>
-                    <LinkScroll activeClass="active" to="whois" spy={false} smooth={true} offset={5} duration={600} >
+                    <LinkScroll activeClass="active" to="summary" spy={false} smooth={true} offset={5} duration={600} >
                         <li className="link__nav-link" >
                             <GoInfo className="link-icon" />
                         </li>
