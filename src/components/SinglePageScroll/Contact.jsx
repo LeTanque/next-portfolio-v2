@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import { FaDev } from "react-icons/fa";
 import { AiOutlineGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 
 const Contact = props => {
@@ -39,20 +40,21 @@ const Contact = props => {
                 {userContact && userContact.map((info, index) => (
                     <React.Fragment key={index} >
                         <div className="block__link-icons">
-                            <a href={info.github} alt="github"  className="link__contact"  >
+                            <a href={info.github}  alt="github"  className="link__contact"  >
                                 <AiOutlineGithub />
                             </a>
-                            <a href={info.github} alt="linkedin"  className="link__contact"  >
+                            <a href={info.linkedin}  alt="linkedin"  className="link__contact"  >
                                 <AiFillLinkedin />
+                            </a>
+                            <a href={info.devto}  alt="dev to"  className="link__contact"  >
+                                <FaDev />
                             </a>
                             <div  className="link__contact" onClick={() => copyEmail()} >
                                 <AiOutlineMail />
-
                                 <div 
                                     className="block__tooltip"
                                     style={{ opacity: `${textCopied ? "0.75" : "0"}` }}
                                 >Email copied to clipboard!</div>
-
                             </div>
                         </div>
                         <textarea 

@@ -76,6 +76,7 @@ const Project = props => {
 
                 <div className="block__single-project-description">
                     <p>{project.description}</p>
+                    <p>{project.role}</p>
                     <div className="block__project-link" >
                         <GoLink /><a href={project.link} className="link__project" alt={project.name} >Link to deployed site</a>
                     </div>

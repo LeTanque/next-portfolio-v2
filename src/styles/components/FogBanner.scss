@@ -25,7 +25,20 @@
             strong {
                 font-size: 10vw;
                 color: $text-emphasis;
-                text-shadow: 0 0 24px $shadows;
+                // text-shadow: 0 0 24px $shadows; // OG
+                // text-shadow: 4px 3px 0px $shadows, 9px 8px 0px rgba(0,0,0,0.15); // Double shadow
+                text-shadow: 
+                    0px 1px 0px $text-alt, // Down and distant 3d
+                    0px 0px 6px rgba(0, 0, 0, 0.3), 
+                    0px 10px 10px rgba(0, 0, 0, 0.1), 
+                    0px 14px 20px rgba(0, 0, 0, 0.1), 
+                    8px 20px 35px rgba(0, 0, 0, 0.1), 
+                    -8px 20px 35px rgba(0, 0, 0, 0.1); 
+                            
+                // text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                //  10px 20px 5px rgba(0,0,0,0.05),
+                //  -10px 20px 5px rgba(0,0,0,0.05);
+
                 opacity: 0;
                 display: flex;
                 justify-content: center;
@@ -42,7 +55,7 @@
                     font-style: italic;
                     letter-spacing: 0;
                     animation: none;
-                    color: $slackfg;
+                    color: $text;
                     @media #{$desktop} {
                         font-size: 4rem;
                     }
