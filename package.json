@@ -2,6 +2,7 @@
   "name": "next-portfolio-v2",
   "version": "2.0.0",
   "description": "",
+  "private": true,
   "main": "./src/server.js",
   "scripts": {
     "dev": "next ./src -p $PORT",
