@@ -3,7 +3,9 @@
 .main__contact-container {
     display: block;
     position: relative;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 50px;
     overflow: hidden;
     @media #{$mediumMax} {
         padding: 0 40px;
@@ -77,8 +79,9 @@
     padding: 5px 10px;
     font-size: 1.6rem;
     position: absolute;
-    bottom: 0;
+    top: 0;
     margin: 0 auto;
     transition: opacity 1000ms ease;
+    z-index: 200;
 }
 
