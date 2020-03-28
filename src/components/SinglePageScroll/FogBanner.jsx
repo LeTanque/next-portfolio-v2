@@ -18,7 +18,7 @@ const FogBanner = () => {
     const [ fogScrollStyle, setFogScrollStyle ] = useState({ ...foggyLettersClear });
     const fogScrolls = [ 
         { pos: "scroller-top", message: "can you see me?" }, 
-        { pos: "scroller-middle", message: "say hi! txt 408 800 5266" }
+        { pos: "scroller-middle", message: "say hi! frankie.martinez@gmail.com" }
     ];
 
     // loading trigger to turn fog on
