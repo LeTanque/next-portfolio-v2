@@ -49,11 +49,13 @@
 // @import "./components/Polaroid.scss";
 @import "./components/TextLoop.scss";
 // @import "./components/Posts.scss";
-@import "./components/FogBanner.scss";
-@import "./components/ProfileScroll.scss";
-@import "./components/Whois.scss";
-@import "./components/Projects.scss";
-@import "./components/Summary.scss";
+
+@import "./components/ProfileScroll/FogBanner.scss";
+@import "./components/ProfileScroll/ProfileScroll.scss";
+@import "./components/ProfileScroll/Whois.scss";
+@import "./components/ProfileScroll/Projects.scss";
+@import "./components/ProfileScroll/Summary.scss";
+@import "./components/ProfileScroll/Contact.scss";
 
 // @import "./components/dnd-dropzone/Dustbin.scss";
 // @import "./components/dnd-dropzone/Box.scss";

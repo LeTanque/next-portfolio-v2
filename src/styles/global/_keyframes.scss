@@ -27,8 +27,8 @@
         letter-spacing: -20px;
     }
     100% {
-        opacity: 0.9;
-        letter-spacing: 25px;
+        opacity: 1;
+        letter-spacing: 0;
     }
 }
 
@@ -48,7 +48,7 @@
         right: 0;
     }
     100% {
-        right: -100vw;
+        right: -160vw;
     }
 }
 @keyframes bigScrollBottom {

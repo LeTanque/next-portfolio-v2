@@ -14,7 +14,7 @@ const Summary = props => {
         <main className="main__summary-container" >
             <section className="section__summary" >
                 <div className="block__summary-header">
-                    <h2>Summary</h2>
+                    <h3>Summary</h3>
                 </div>
             </section>
             <div className="block__summary">

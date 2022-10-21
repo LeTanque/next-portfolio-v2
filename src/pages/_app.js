@@ -80,6 +80,7 @@ export default class MyApp extends App {
                 <Head>
                     <title>LeTanque</title>
                     <link rel="icon" href="/favicon.ico" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                     <script
                         id="session"
                         type="application/json"

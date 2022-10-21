@@ -1,0 +1,87 @@
+
+
+.main__contact-container {
+    display: block;
+    position: relative;
+    // margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    @media #{$mediumMax} {
+        padding: 0 40px;
+    }
+    
+    .section__contact {
+        background-color: $header1;
+        color: $header2;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        @media #{$smallMax} {
+            padding: 0 5%;
+            width: calc(100% - 60px);
+        }
+        .block__contact-header {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 10px 0;
+            div {
+                color: $secondary;
+                font-family: $cursive-font;
+                font-size: 5rem;
+                line-height: 1;
+                padding-bottom: 20px;
+            }
+            h5 {
+                color: $text;
+                line-height: 1;
+            }
+        }
+    }
+    .block__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // margin-top: -30px;
+        .block__link-icons {
+            display: flex;
+            flex-direction: row;
+            .link__contact {
+                @include link();
+                font-size: 6rem;
+                background-color: $bg-color;
+                padding: 10px;
+                border-radius: 100%;
+                // margin: 0 10px;
+                display: flex;
+                justify-content: center;
+            }
+            p {
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+
+
+.block__tooltip {
+    color: $secondary;
+    background-color: $bg-color;
+    opacity: 0.75;
+    padding: 5px 10px;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    transition: opacity 1000ms ease;
+    z-index: 200;
+}
+

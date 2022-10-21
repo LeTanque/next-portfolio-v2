@@ -35,14 +35,14 @@
     }
 }
 
-@mixin link() {
-    color: $link;
+@mixin link($color: $link, $hover: $linkactive) {
+    color: $color;
     text-decoration: none;
     user-select: none;
     transition: color 600ms ease-in;
     cursor: pointer;
     &:hover {
-        color: $linkactive;
+        color: $hover;
         transition: color 300ms ease-out;
     }
 }
@@ -56,11 +56,6 @@
     }
 }
 
-@mixin foggyLetters() {
-    color: rgba($white, 0);
-    text-shadow: 0 0 88px $white;
-    user-select: none;
-}
 
 
 @mixin smoothTransition($transTime: 300ms) {

@@ -1,25 +1,26 @@
 
 
 .main__profile-card-container {
-    display: block;
+    display: flex;
     position: relative;
     top: 0px;
-    margin-bottom: 50px;
     overflow: hidden;
-    @media #{$mediumMax} {
-        padding: 0 40px;
-    }
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    // @media #{$mediumMax} {
+    //     padding: 0 40px;
+    // }
     
     .section__profile-card {
-        background-color: $bg-color-alt;
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
+        margin-left: 30px;
         display: flex;
         flex-direction: column;
-        padding: 0 50px;
         @media #{$smallMax} {
-            padding: 0 5%;
             width: calc(100% - 60px);
         }
         .block__profile-header {
@@ -29,6 +30,7 @@
             flex-direction: column;
             padding-bottom: 30px;
             padding-top: 30px;
+            margin-top: 60px;
             div {
                 color: $secondary;
                 font-family: $cursive-font;
@@ -39,6 +41,7 @@
             h1 {
                 color: $text;
                 line-height: 1;
+                text-align: left;
                 span {
                     font-style: italic;
                     font-weight: lighter;
@@ -46,7 +49,9 @@
             }
             h5 {
                 color: $text;
-                line-height: 1;
+                font-family: $body-font;
+                line-height: 0.75;
+                margin-left: 10px;
             }
         }
         ul {

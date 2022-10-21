@@ -1,0 +1,53 @@
+.section__profile-scroll {
+    font-family: $body-font;
+    text-align: center;
+    max-width: 100%;
+    position: relative;
+    .block__fade-in-section {
+        opacity: 0;
+        transform: translateY(1vh);
+        visibility: hidden;
+        transition: opacity 1200ms ease-out, transform 600ms ease-out, visibility 1200ms ease-out;
+        will-change: opacity, transform, visibility;
+    }
+    .block__fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
+    // Specific content containers
+    .block__fade-in-section.fog-banner.is-visible {
+        height: 100vh;
+    }
+    .block__fade-in-section.whois.is-visible {
+        height: 100%;
+    }
+}    
+
+.element__profile-scroll {
+    background-color: $bg-color;
+}
+
+// Simplebox. Outside of it's parent in case it's used elsewhere
+.block__fade-in-section.simplebox.is-visible {
+    display: block;
+    position: relative;
+    z-index: 100;
+    .block__scroll-box {
+        height: 50px;
+        background-color: $bg-color;
+        span {
+            background-color: rgba(255, 255, 255, 0.5);
+            display: inline-block;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    }
+    .block__scroll-box.one {
+        box-shadow: 0 -15px 33px 3px rgba(0,0,0,0.25), 0 -4px 10px 5px rgba(0,0,0,0.3);
+    }
+    .block__scroll-box.two {
+        background-color: $secondary;
+        height: 3px;
+    }
+}

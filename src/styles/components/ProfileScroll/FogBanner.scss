@@ -25,23 +25,39 @@
             strong {
                 font-size: 10vw;
                 color: $text-emphasis;
-                text-shadow: 0 0 24px $shadows;
+                // text-shadow: 0 0 24px $shadows; // OG
+                // text-shadow: 4px 3px 0px $shadows, 9px 8px 0px rgba(0,0,0,0.15); // Double shadow
+                text-shadow: 
+                    0px 1px 0px $text-alt, // Down and distant 3d
+                    0px 0px 6px rgba(0, 0, 0, 0.3), 
+                    0px 10px 10px rgba(0, 0, 0, 0.1), 
+                    0px 14px 20px rgba(0, 0, 0, 0.1), 
+                    8px 20px 35px rgba(0, 0, 0, 0.1), 
+                    -8px 20px 35px rgba(0, 0, 0, 0.1); 
+                            
+                // text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                //  10px 20px 5px rgba(0,0,0,0.05),
+                //  -10px 20px 5px rgba(0,0,0,0.05);
+
                 opacity: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-direction: column;
+                line-height: 0.85;
                 @include anima-spaceOut();
                 @media #{$desktop} {
                     font-size: 15rem;
                 }
-                span {
+                .block__subtitle {
                     font-family: $body-font;
-                    font-size: 5vw;
+                    font-size: 3.5vw;
                     font-style: italic;
                     letter-spacing: 0;
                     animation: none;
+                    color: $text;
                     @media #{$desktop} {
-                        font-size: 7rem;
+                        font-size: 4rem;
                     }
                 }
             }
@@ -56,14 +72,15 @@
     height: 100%;
     .block__scroller {
         top: 0;
-        opacity: 0.39;
+        opacity: 0.30;
         z-index: 0;
         position: absolute;
         strong {
+            color: rgba($white, 0.05);
             font-family: $cursive-font;
             font-size: 100vw;
             text-transform: uppercase;
-            @include foggyLetters;
+            user-select: none;
         }
     }
 }
@@ -72,17 +89,23 @@
     top: -80vh;
     transform: rotate(-25deg);
     .block__scroller {
-        transform: translateX(-55%);
-        @include anima-bigScroll($runtime: 29s, $aniname: bigScrollTop);
+        transform: translateX(-58%);
+        @include anima-bigScroll($runtime: 46s, $aniname: bigScrollTop);
+        strong {
+            text-shadow: 0 0 160px rgba($slackfgalt, 0.9);
+        }
     }
 }
 
 .section__scroller-container.scroller-middle {
     top: -15vh;
-    transform: rotate(-11deg);
+    transform: rotate(-22deg);
     .block__scroller {
-        transform: translateX(85%);
-        @include anima-bigScroll($runtime: 20s, $aniname: bigScrollMiddle);
+        transform: translateX(15%);
+        @include anima-bigScroll($runtime: 80s, $aniname: bigScrollMiddle);
+        strong {
+            text-shadow: 0 0 132px rgba($slackfg, 0.85);
+        }
     }
 }
 
@@ -92,6 +115,9 @@
     .block__scroller {
         transform: translateX(-70%);
         @include anima-bigScroll($runtime: 25s, $aniname: bigScrollBottom);
+        strong {
+            text-shadow: 0 0 88px $white;
+        }
     }
 }
 
